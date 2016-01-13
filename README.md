@@ -2,6 +2,8 @@
 
 ![Hugo Arch Theme screenshot](https://raw.githubusercontent.com/syui/hugo-theme-arch/master/themes/hugo-theme-arch/images/screenshot.png)
 
+[Demo](https://syui.github.io/hugo-theme-arch)
+
 ## Get the source code
 
 I assume you've Git installed. Inside the folder of your Hugo site run
