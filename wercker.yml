@@ -1,0 +1,12 @@
+box: wercker/default
+build:
+    steps:
+        - arjen/hugo-build:
+                version: "0.14"
+                theme: hugo-theme-arch
+                flags: --buildDrafts=true
+deploy:
+    steps:
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        basedir: public

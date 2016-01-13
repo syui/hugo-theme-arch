@@ -1,0 +1,182 @@
+.navbar-brand span.icon-archlinux:hover {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	color: #38B7EA;
+}
+
+.navbar-brand span.icon-archlinuxjp {
+	font-size: 40px;
+	position: absolute;
+	color: #1793D1;
+}
+
+.navbar-brand span.icon-archlinux {
+	font-size: 40px;
+	color: #1793D1;
+}
+.navbar-brand span.site-title {
+	position: absolute;
+	padding-left: 5px;
+	color: #fff;
+}
+
+.navbar-brand span.icon-archlinuxjp-simple {
+	font-size: 40px;
+	color: #fff;
+	position:relative;
+}
+
+.nav.navbar-nav.navbar-right li span.icon-archlinux-font-arch {
+	padding-left: 5px;
+	font-size: 45px;
+	color: #fff;
+}
+
+.nav.navbar-nav.navbar-right li a span.icon-archlinux-font-linux {
+	font-size: 45px;
+	color: #1794D1;
+}
+
+.navbar-brand span.icon-archlinuxjp:hover {
+	color:#38b7ea;
+}
+
+.navbar-brand a:link {
+	text-decoration: none !important;
+}
+
+.navbar-brand a: {
+	text-decoration: none !important;
+}
+
+/* effect */
+h1 a:hover span.icon-archlinux {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	-moz-text-shadow:0px 0px 1px black, 0 0 15px #38b7ea;
+	-webkit-text-shadow:0px 0px 1px black, 0 0 15px #38b7ea;
+	-o-text-shadow:0px 0px 1px black, 0 0 15px #38b7ea;
+	text-shadow:0px 0px 1px black, 0 0 15px #38b7ea;
+	color:#38b7ea;
+}
+
+h1 a:hover span.icon-archlinuxjp {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	-moz-text-shadow:0px 0px 1px black, 0 0 15px #38b7ea;
+	-webkit-text-shadow:0px 0px 1px black, 0 0 15px #38b7ea;
+	-o-text-shadow:0px 0px 1px black, 0 0 15px #38b7ea;
+	text-shadow:0px 0px 1px black, 0 0 15px #38b7ea;
+	color:#38b7ea;
+}
+
+h1 a:hover span.icon-archlinuxjp-simple {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	-moz-text-shadow:0px 0px 1px #38b7ea, 0 0 5px #38b7ea;
+	-webkit-text-shadow:0px 0px 1px #38b7ea, 0 0 5px #38b7ea;
+	-o-text-shadow:0px 0px 1px #38b7ea, 0 0 5px #38b7ea;
+	text-shadow:0px 0px 1px #38b7ea, 0 0 5px #38b7ea;
+	color:#fff;
+}
+
+#footer a:hover {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	color: #07b;
+}
+/* font-awesome */
+.fa-rss {
+	color: #FF7B39;
+}
+
+.fa-rss:hover {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	color: #07b;
+}
+
+.fa-rss-square {
+	color: #FF7B39;
+}
+.fa-rss-square:hover {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	color: #07b;
+}
+.rss-right {
+  text-align: right;
+}
+
+.fa-bars:hover {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	color: #1794D1;
+}
+
+.fa-bars {
+	color: #fff;
+	padding-top: 7px;
+}
+
+.header-inner {
+	background-color: #333;
+
+}
+
+a.navbar-brand span.site-title-arch {
+	position: absolute;
+	padding-left:5px;
+	font-size:33px;
+	color: #fff;
+	font-weight: 700;
+}
+a.navbar-brand span.site-title-linux {
+	position: absolute;
+	padding-left:76px;
+	font-size:36px;
+	color: #fff;
+	color: #1793D1;
+	font-weight: 200;
+}
+#header a, #header a:visited {
+	color: #fff;
+	position:relative;
+}
+
+#header a:hover, #header a:hover {
+	color:#38b7ea;
+	position:relative;
+}
+
+.widget-download {
+	margin-top:30px;
+}
+
+.fa-arrow-circle-o-down:hover {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	color: #1794D1;
+}
+
+.widget-title .fa-rss-square {
+	font-size:18px;
+}
