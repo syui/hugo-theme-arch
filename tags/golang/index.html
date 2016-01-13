@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    
+    <title>Golang</title>
+    <meta name="generator" content="Hugo 0.15" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    
+      <link href="https://syui.github.io/hugo-theme-arch/tags/golang/index.xml" rel="alternate" type="application/rss+xml" title="hugo-theme-arch" />
+      <link href="https://syui.github.io/hugo-theme-arch/tags/golang/index.xml" rel="feed" type="application/rss+xml" title="hugo-theme-arch" />
+    
+    <link rel="icon" href="https://syui.github.io/hugo-theme-archfavicon.ico">
+    <link rel="apple-touch-icon" href="https://syui.github.io/hugo-theme-archapple-touch-icon.png" />
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-archcss/style.css">
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-archcss/monokai.css">
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-archfancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-archfont/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-archfont/icomoon/css/icomoon.css">
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-archcss/font.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Golang" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://syui.github.io/hugo-theme-arch/tags/golang/" />
+
+
+<meta property="og:updated_time" content="2016-01-01T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Golang">
+<meta itemprop="description" content="">
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://syui.github.io/hugo-theme-archfancybox/jquery.fancybox.pack.js"></script>
+    <script src="https://syui.github.io/hugo-theme-archjs/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    <script src="https://syui.github.io/hugo-theme-archjs/jquery.hotkeys.js "></script>
+
+    
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-archbootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-archbootstrap/css/dropdowns-enhancement.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://syui.github.io/hugo-theme-archbootstrap/js/bootstrap.min.js"></script>
+    <script src="https://syui.github.io/hugo-theme-archbootstrap/js/dropdowns-enhancement.js"></script>
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-archcss/bootstrap.css">
+</head>
+<body>
+<div class="container">
+ <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+
+    	    <div class="navbar-header">
+      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      		  <span class="sr-only">Toggle navigation</span>
+      		  <span class="icon-bar"></span>
+      		  <span class="icon-bar"></span>
+      		  <span class="icon-bar"></span>
+      		</button>
+		    <h1>
+			    <a class="navbar-brand" href="https://syui.github.io/hugo-theme-arch">
+				    <span class="icon-archlinux"></span>
+				    
+				    
+				    <span class="site-title-arch">arch</span>
+				    <span class="site-title-linux">linux</span>
+			    </a>
+		    </h1>
+	    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+    
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Packages</a></li>
+        <li><a href="#">Forums</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wiki<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">About Arch</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Application</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">List Application</a></li>
+                    <li role="separator" class="divider"></li>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">Application launchers</a></li>
+              <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Command shells</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bash</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Invocation</a></li>
+                  <li><a href="#">Command line</a></li>
+                </ul>
+                </li>
+              </ul>
+              </li>
+            </ul>
+            </li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">Hardware</a></li>
+            <li><a href="#">Networking</a></li>
+            <li><a href="#">System administration</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">ArchWiki</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Bugs</a></li>
+        <li><a href="#">AUR</a></li>
+
+          <form class="navbar-form navbar-left" role="search" action="#" method="get">
+        <input type="hidden" value="archlinux.org">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Package Search" name="q">
+        </div>
+        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+      </form>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+</header>
+
+
+<div id="container">
+    <div class="outer">
+        <section id="main">
+            <section class="archives-wrap">
+                <div class="archive-category-wrap">
+                    <span class="archive-category">Golang</span>
+                </div>
+                <div class="archives">
+                    
+                    
+                        <article class="archive-article archive-type-post">
+    <div class="archive-article-inner">
+
+        <div class="archive-article-thumbnail">
+
+            
+            <a href="https://syui.github.io/hugo-theme-arch/2016/01/01/sample" class="thumbnail">
+                <span class="thumbnail-image thumbnail-none"></span>
+            </a>
+            
+        </div>
+        <header class="archive-article-header">
+            <h1 itemprop="name">
+            <a class="archive-article-title" href="https://syui.github.io/hugo-theme-arch/2016/01/01/sample">Creating a new theme</a>
+            </h1>
+            <div class="archive-article-date">
+		    
+                <time datetime="2016-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-01-01</time>
+            </div>
+        </header>
+    </div>
+</article>
+ 
+                    
+                </div>
+            </section>
+            <nav id="page-nav">
+
+</nav>
+
+        </section>
+        <aside id="sidebar">
+    <div class="widget-wrap">
+    <div class="widget-download">
+<div class="btn-group">
+<a href="#">
+  <button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cloud-download"></i> Download</button>
+</a>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <i class="fa fa-question-circle"></i> Help <span class="caret"></span>
+
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Installation guide</a></li>
+    <li><a href="#">Beginners guide</a></li>
+    <li><a href="#">FAQ</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Download</a></li>
+  </ul>
+</div>
+</div>
+</div>
+
+
+    <div class="widget-wrap">
+    <div class="widget">
+		<h3 class="widget-title">
+			Documentation
+					
+    </h3><ul class="category-list">
+            <li class="category-list-item">
+		<a href="#">Wiki</a>
+	    </li>
+            <li class="category-list-item">
+		<a href="#">Installation Guide</a>
+	    </li>
+            <li class="category-list-item">
+		<a href="#">Beginners' Guide</a>
+	    </li>
+    </ul>
+    </div>
+</div>
+
+    
+
+<div class="widget-wrap">
+    <div class="widget">
+        <ul id="recent-post">
+		<li id="first-recent"><a href="sitemap.xml" id="firstmove" class="move"><h3 class="widget-title">
+			Latest News
+					
+    </h3></a></li>
+            
+	    <li>
+		    
+		<a href="https://syui.github.io/hugo-theme-arch/2016/01/01/sample" class="move">Creating a new theme</a>
+
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="https://syui.github.io/hugo-theme-archcategories/news">
+                    news
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+    
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+	    Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="https://syui.github.io/hugo-theme-archtags/golang" style="font-size: 12px;">golang</a>
+        
+        <a href="https://syui.github.io/hugo-theme-archtags/hugo" style="font-size: 12px;">hugo</a>
+        
+        <a href="https://syui.github.io/hugo-theme-archtags/jekyll" style="font-size: 12px;">jekyll</a>
+        
+    </div>
+</div>
+
+
+
+    <div class="widget-wrap">
+    <div class="widget">
+	    <h3 class="widget-title">Template</h3>
+		
+		<h1 id="hugo-theme-arch">Hugo Theme Arch</h1>
+
+<p><img src="https://raw.githubusercontent.com/syui/hugo-theme-arch/master/themes/hugo-theme-arch/images/screenshot.png" alt="Hugo Arch Theme screenshot" /></p>
+
+<p><a href="https://syui.github.io/hugo-theme-arch">Demo</a></p>
+
+<h2 id="get-the-source-code">Get the source code</h2>
+
+<p>I assume you&rsquo;ve Git installed. Inside the folder of your Hugo site run</p>
+
+<pre><code class="language-bash">$ git clone https://github.com/syui/hugo-theme-arch
+$ cd hugo-theme-arch
+</code></pre>
+
+<h2 id="nearly-finished">Nearly finished</h2>
+
+<p>In order to see your site in action, run Hugo&rsquo;s built-in local server.</p>
+
+<pre><code class="language-bash"># install hugo
+$ sudo pacman -S go
+$ export GOPATH=$HOME/go
+$ go get -v github.com/spf13/hugo
+
+# build
+$ hugo
+
+# preview
+$ hugo server
+------------------------
+$ curl -sL localhost:1313
+</code></pre>
+
+<p>Now enter <a href="//localhost:1313"><code>localhost:1313</code></a> in the address bar of your browser.</p>
+
+<h2 id="annotations">Annotations</h2>
+
+<p>Thanks to <a href="//github.com/spf13">Steve Francia</a> for creating Hugo and the awesome community around the project.</p>
+
+<p>Thanks to <a href="https://github.com/digitalcraftsman">Digitalcraftsman</a> for creating Hugo theme.
+</div>
+</div>
+
+
+    
+</aside>
+
+    </div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+	    &copy; 2016 <i class="fa fa-github"></i> <a href="https://github.com/syui">syui</a>. <br>
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/syui/hugo-theme-arch">hugo-theme-arch</a>.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

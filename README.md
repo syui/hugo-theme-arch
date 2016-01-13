@@ -1,8 +1,6 @@
 # Hugo Theme Arch
 
-![Hugo Arch Theme screenshot](https://raw.githubusercontent.com/syui/hugo-theme-arch/master/themes/hugo-theme-arch/images/screenshot.png)
-
-[Demo](https://syui.github.io/hugo-theme-arch)
+![Hugo Arch Theme screenshot](https://raw.githubusercontent.com/syui/hugo-theme-arch/master/images/screen.png)
 
 ## Get the source code
 

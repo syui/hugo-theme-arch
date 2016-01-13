@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on hugo-theme-arch</title>
+    <link>https://syui.github.io/hugo-theme-arch/post/</link>
+    <description>Recent content in Posts on hugo-theme-arch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://syui.github.io/hugo-theme-arch/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Creating a new theme</title>
+      <link>https://syui.github.io/hugo-theme-arch/2016/01/01/sample</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://syui.github.io/hugo-theme-arch/2016/01/01/sample</guid>
+      <description>
+
+&lt;h2 id=&#34;overview:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Hugo is a static HTML and CSS website generator written in [Go][].
+It is optimized for speed, easy use and configurability.
+Hugo takes a directory with content and templates and renders them into a full HTML website.&lt;/p&gt;
+
+&lt;p&gt;Hugo relies on Markdown files with front matter for meta data.
+And you can run Hugo from any directory.
+This works well for shared hosts and other systems where you don’t have a privileged account.&lt;/p&gt;
+
+&lt;p&gt;Hugo renders a typical website of moderate size in a fraction of a second.
+A good rule of thumb is that each piece of content renders in around 1 millisecond.&lt;/p&gt;
+
+&lt;p&gt;Hugo is designed to work well for any kind of website including blogs, tumbles and docs.&lt;/p&gt;
+
+&lt;h4 id=&#34;supported-architectures:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Supported Architectures&lt;/h4&gt;
+
+&lt;p&gt;Currently, we provide pre-built Hugo binaries for Windows, Linux, FreeBSD, NetBSD and OS&amp;nbsp;X (Darwin) for x64, i386 and ARM architectures.&lt;/p&gt;
+
+&lt;p&gt;Hugo may also be compiled from source wherever the Go compiler tool chain can run, e.g. for other operating systems including DragonFly BSD, OpenBSD, Plan&amp;nbsp;9 and Solaris.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Complete documentation is available at [Hugo Documentation][].&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;choose-how-to-install:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Choose How to Install&lt;/h2&gt;
+
+&lt;p&gt;If you want to use Hugo as your site generator, simply install the Hugo binaries.
+The Hugo binaries have no external dependencies.&lt;/p&gt;
+
+&lt;p&gt;To contribute to the Hugo source code or documentation, you should &lt;a href=&#34;https://github.com/spf13/hugo#fork-destination-box&#34;&gt;fork the Hugo GitHub project&lt;/a&gt; and clone it to your local machine.&lt;/p&gt;
+
+&lt;p&gt;Finally, you can install the Hugo source code with &lt;code&gt;go&lt;/code&gt;, build the binaries yourself, and run Hugo that way.
+Building the binaries is an easy task for an experienced &lt;code&gt;go&lt;/code&gt; getter.&lt;/p&gt;
+
+&lt;h3 id=&#34;install-hugo-as-your-site-generator-binary-install:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Install Hugo as Your Site Generator (Binary Install)&lt;/h3&gt;
+
+&lt;p&gt;Use the &lt;a href=&#34;http://gohugo.io/overview/installing/&#34;&gt;installation instructions in the Hugo documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;clone-the-hugo-project-contributor:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Clone the Hugo Project (Contributor)&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Make sure your local environment has the following software installed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mercurial-scm.org/&#34;&gt;Mercurial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Go][] 1.4+&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;Fork the Hugo project on GitHub&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Clone your fork:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/YOURNAME/hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Change into the &lt;code&gt;hugo&lt;/code&gt; directory:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install the Hugo project’s package dependencies:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go get -u -v github.com/spf13/hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use a symbolic link to add your locally cloned Hugo repository to your &lt;code&gt;$GOPATH&lt;/code&gt;, assuming you prefer doing development work outside of &lt;code&gt;$GOPATH&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rm -rf &amp;quot;$GOPATH/src/github.com/spf13/hugo&amp;quot;
+ln -s `pwd` &amp;quot;$GOPATH/src/github.com/spf13/hugo&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Go expects all of your libraries to be found in&lt;code&gt;$GOPATH&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;build-and-install-the-binaries-from-source-advanced-install:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Build and Install the Binaries from Source (Advanced Install)&lt;/h3&gt;
+
+&lt;p&gt;Add Hugo and its package dependencies to your go &lt;code&gt;src&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go get -v github.com/spf13/hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once the &lt;code&gt;get&lt;/code&gt; completes, you should find your new &lt;code&gt;hugo&lt;/code&gt; (or &lt;code&gt;hugo.exe&lt;/code&gt;) executable sitting inside &lt;code&gt;$GOPATH/bin/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To update Hugo’s dependencies, use &lt;code&gt;go get&lt;/code&gt; with the &lt;code&gt;-u&lt;/code&gt; option.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go get -u -v github.com/spf13/hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;contribute-to-hugo:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Contribute to Hugo&lt;/h2&gt;
+
+&lt;p&gt;We welcome contributions to Hugo of any kind including documentation, themes, organization, tutorials, blog posts, bug reports, issues, feature requests, feature implementation, pull requests, answering questions on the forum, helping to manage issues, etc.&lt;/p&gt;
+
+&lt;p&gt;The Hugo community and maintainers are very active and helpful and the project benefits greatly from this activity.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://waffle.io/spf13/hugo/metrics&#34;&gt;&lt;img src=&#34;https://graphs.waffle.io/spf13/hugo/throughput.svg&#34; alt=&#34;Throughput Graph&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have any questions about how to contribute or what to contribute please ask on the &lt;a href=&#34;http://discuss.gohugo.io&#34;&gt;forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;code-contribution-guideline:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Code Contribution Guideline&lt;/h2&gt;
+
+&lt;p&gt;We welcome your contributions.
+To make the process as seamless as possible, we ask for the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go ahead and fork the project and make your changes. We encourage pull requests to discuss code changes.&lt;/li&gt;
+&lt;li&gt;When you’re ready to create a pull request, be sure to:
+
+&lt;ul&gt;
+&lt;li&gt;Sign the &lt;a href=&#34;https://cla-assistant.io/spf13/hugo&#34;&gt;CLA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Have test cases for the new code. If you have questions about how to do it, please ask in your pull request.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;go fmt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Squash your commits into a single commit. &lt;code&gt;git rebase -i&lt;/code&gt;. It’s okay to force update your pull request.&lt;/li&gt;
+&lt;li&gt;This &lt;a href=&#34;http://chris.beams.io/posts/git-commit/&#34;&gt;blog article&lt;/a&gt; is a good resource for learning how to write good commit messages, the most important part being that each commit message should have a title/subject in imperative mood starting with a capital letter and no trailing period: &lt;em&gt;&amp;ldquo;Return error on wrong use of the Paginator&amp;rdquo;&lt;/em&gt;, &lt;strong&gt;NOT&lt;/strong&gt; &lt;em&gt;&amp;ldquo;returning some error.&amp;rdquo;&lt;/em&gt; Also, if your commit references one or more GitHub issues, always end your commit message body with &lt;em&gt;See #1234&lt;/em&gt; or &lt;em&gt;Fixes #1234&lt;/em&gt;. Replace &lt;em&gt;1234&lt;/em&gt; with the GitHub issue ID. The last example will close the issue when the commit is merged into &lt;em&gt;master&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Make sure &lt;code&gt;go test ./...&lt;/code&gt; passes, and &lt;code&gt;go build&lt;/code&gt; completes. Our &lt;a href=&#34;https://travis-ci.org/spf13/hugo&#34;&gt;Travis CI loop&lt;/a&gt; (Linux) and &lt;a href=&#34;https://ci.appveyor.com/project/spf13/hugo/branch/master&#34;&gt;AppVeyor&lt;/a&gt; (Windows) will catch most things that are missing.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;build-hugo-with-your-changes:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Build Hugo with Your Changes&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /path/to/hugo
+go build -o hugo main.go
+mv hugo /usr/local/bin/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;add-compile-information-to-hugo:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Add Compile Information to Hugo&lt;/h3&gt;
+
+&lt;p&gt;To add compile information to Hugo, replace the &lt;code&gt;go build&lt;/code&gt; command with the following &lt;em&gt;(replace &lt;code&gt;/path/to/hugo&lt;/code&gt; with the actual path)&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go build -ldflags &amp;quot;-X /path/to/hugo/hugolib.CommitHash `git rev-parse --short HEAD 2&amp;gt;/dev/null` -X github.com/spf13/hugo/hugolib.BuildDate `date +%FT%T%z`&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will result in &lt;code&gt;hugo version&lt;/code&gt; output that looks similar to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Hugo Static Site Generator v0.13-DEV-8042E77 buildDate: 2014-12-25T03:25:57-07:00
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Alternatively, just run &lt;code&gt;make&lt;/code&gt; &amp;mdash; all the “magic” above is already in the &lt;code&gt;Makefile&lt;/code&gt;.  :wink:&lt;/p&gt;
+
+&lt;h3 id=&#34;run-hugo:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Run Hugo&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /path/to/hugo
+go install github.com/spf13/hugo/hugolib
+go run main.go
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
