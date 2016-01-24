@@ -60,7 +60,8 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://syui.github.io/hugo-theme-arch/bower_components/jquery/dist/jquery-2.2.0.min.js "></script>
+    
     <script src="https://syui.github.io/hugo-theme-arch/fancybox/jquery.fancybox.pack.js"></script>
     <script src="https://syui.github.io/hugo-theme-arch/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
@@ -79,12 +80,20 @@
     <script src="https://syui.github.io/hugo-theme-arch/js/jquery.hotkeys.js "></script>
 
     
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/bootstrap/css/dropdowns-enhancement.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://syui.github.io/hugo-theme-arch/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://syui.github.io/hugo-theme-arch/bootstrap/js/dropdowns-enhancement.js"></script>
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/bower_components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/bower_components/bootstrap/css/dropdowns-enhancement.css">
+    <script src="https://syui.github.io/hugo-theme-arch/bower_components/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://syui.github.io/hugo-theme-arch/bower_components/bootstrap/js/dropdowns-enhancement.js"></script>
     <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/css/bootstrap.css">
+
+    
+    <link href="https://syui.github.io/hugo-theme-arch/bower_components/talaria/dist/talaria.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://syui.github.io/hugo-theme-arch/bower_components/bluebird/js/browser/bluebird.js"></script>
+    <script type="text/javascript" src="https://syui.github.io/hugo-theme-arch/bower_components/talaria/dist/talaria.js"></script>
+
+    
+    
+
 </head>
 <body>
 <div class="container">
@@ -178,13 +187,12 @@
 <div id="container">
    <div class="outer">
     <section id="main">
-    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <article>
         <div class="article-inner">
             
 
             <header class="article-header">
-    <a href="https://syui.github.io/hugo-theme-arch/2016/01/01/sample">
-
+    <a href="https://syui.github.io/hugo-theme-arch/2016/01/01/sample" class="permalink">
     <h1 class="article-title" itemprop="name">
         Creating a new theme
     </h1>
@@ -226,7 +234,7 @@
             <div class="article-entry" itemprop="articleBody">
                 
 
-<h2 id="overview:04c6e90faac2675aa89e2176d2eec7d8">Overview</h2>
+<h2 id="overview:5b8c86d873483e1268c2cd083c92eb02">Overview</h2>
 
 <p>Hugo is a static HTML and CSS website generator written in [Go][].
 It is optimized for speed, easy use and configurability.
@@ -241,7 +249,7 @@ A good rule of thumb is that each piece of content renders in around 1 milliseco
 
 <p>Hugo is designed to work well for any kind of website including blogs, tumbles and docs.</p>
 
-<h4 id="supported-architectures:04c6e90faac2675aa89e2176d2eec7d8">Supported Architectures</h4>
+<h4 id="supported-architectures:5b8c86d873483e1268c2cd083c92eb02">Supported Architectures</h4>
 
 <p>Currently, we provide pre-built Hugo binaries for Windows, Linux, FreeBSD, NetBSD and OS&nbsp;X (Darwin) for x64, i386 and ARM architectures.</p>
 
@@ -249,7 +257,7 @@ A good rule of thumb is that each piece of content renders in around 1 milliseco
 
 <p><strong>Complete documentation is available at [Hugo Documentation][].</strong></p>
 
-<h2 id="choose-how-to-install:04c6e90faac2675aa89e2176d2eec7d8">Choose How to Install</h2>
+<h2 id="choose-how-to-install:5b8c86d873483e1268c2cd083c92eb02">Choose How to Install</h2>
 
 <p>If you want to use Hugo as your site generator, simply install the Hugo binaries.
 The Hugo binaries have no external dependencies.</p>
@@ -259,11 +267,11 @@ The Hugo binaries have no external dependencies.</p>
 <p>Finally, you can install the Hugo source code with <code>go</code>, build the binaries yourself, and run Hugo that way.
 Building the binaries is an easy task for an experienced <code>go</code> getter.</p>
 
-<h3 id="install-hugo-as-your-site-generator-binary-install:04c6e90faac2675aa89e2176d2eec7d8">Install Hugo as Your Site Generator (Binary Install)</h3>
+<h3 id="install-hugo-as-your-site-generator-binary-install:5b8c86d873483e1268c2cd083c92eb02">Install Hugo as Your Site Generator (Binary Install)</h3>
 
 <p>Use the <a href="http://gohugo.io/overview/installing/">installation instructions in the Hugo documentation</a>.</p>
 
-<h3 id="clone-the-hugo-project-contributor:04c6e90faac2675aa89e2176d2eec7d8">Clone the Hugo Project (Contributor)</h3>
+<h3 id="clone-the-hugo-project-contributor:5b8c86d873483e1268c2cd083c92eb02">Clone the Hugo Project (Contributor)</h3>
 
 <ol>
 <li><p>Make sure your local environment has the following software installed:</p>
@@ -300,7 +308,7 @@ ln -s `pwd` &quot;$GOPATH/src/github.com/spf13/hugo&quot;
 <p>Go expects all of your libraries to be found in<code>$GOPATH</code>.</p></li>
 </ol>
 
-<h3 id="build-and-install-the-binaries-from-source-advanced-install:04c6e90faac2675aa89e2176d2eec7d8">Build and Install the Binaries from Source (Advanced Install)</h3>
+<h3 id="build-and-install-the-binaries-from-source-advanced-install:5b8c86d873483e1268c2cd083c92eb02">Build and Install the Binaries from Source (Advanced Install)</h3>
 
 <p>Add Hugo and its package dependencies to your go <code>src</code> directory.</p>
 
@@ -314,7 +322,7 @@ ln -s `pwd` &quot;$GOPATH/src/github.com/spf13/hugo&quot;
 <pre><code>go get -u -v github.com/spf13/hugo
 </code></pre>
 
-<h2 id="contribute-to-hugo:04c6e90faac2675aa89e2176d2eec7d8">Contribute to Hugo</h2>
+<h2 id="contribute-to-hugo:5b8c86d873483e1268c2cd083c92eb02">Contribute to Hugo</h2>
 
 <p>We welcome contributions to Hugo of any kind including documentation, themes, organization, tutorials, blog posts, bug reports, issues, feature requests, feature implementation, pull requests, answering questions on the forum, helping to manage issues, etc.</p>
 
@@ -324,7 +332,7 @@ ln -s `pwd` &quot;$GOPATH/src/github.com/spf13/hugo&quot;
 
 <p>If you have any questions about how to contribute or what to contribute please ask on the <a href="http://discuss.gohugo.io">forum</a>.</p>
 
-<h2 id="code-contribution-guideline:04c6e90faac2675aa89e2176d2eec7d8">Code Contribution Guideline</h2>
+<h2 id="code-contribution-guideline:5b8c86d873483e1268c2cd083c92eb02">Code Contribution Guideline</h2>
 
 <p>We welcome your contributions.
 To make the process as seamless as possible, we ask for the following:</p>
@@ -343,14 +351,14 @@ To make the process as seamless as possible, we ask for the following:</p>
 </ul></li>
 </ul>
 
-<h3 id="build-hugo-with-your-changes:04c6e90faac2675aa89e2176d2eec7d8">Build Hugo with Your Changes</h3>
+<h3 id="build-hugo-with-your-changes:5b8c86d873483e1268c2cd083c92eb02">Build Hugo with Your Changes</h3>
 
 <pre><code class="language-bash">cd /path/to/hugo
 go build -o hugo main.go
 mv hugo /usr/local/bin/
 </code></pre>
 
-<h3 id="add-compile-information-to-hugo:04c6e90faac2675aa89e2176d2eec7d8">Add Compile Information to Hugo</h3>
+<h3 id="add-compile-information-to-hugo:5b8c86d873483e1268c2cd083c92eb02">Add Compile Information to Hugo</h3>
 
 <p>To add compile information to Hugo, replace the <code>go build</code> command with the following <em>(replace <code>/path/to/hugo</code> with the actual path)</em>:</p>
 
@@ -364,7 +372,7 @@ mv hugo /usr/local/bin/
 
 <p>Alternatively, just run <code>make</code> &mdash; all the “magic” above is already in the <code>Makefile</code>.  :wink:</p>
 
-<h3 id="run-hugo:04c6e90faac2675aa89e2176d2eec7d8">Run Hugo</h3>
+<h3 id="run-hugo:5b8c86d873483e1268c2cd083c92eb02">Run Hugo</h3>
 
 <pre><code class="language-bash">cd /path/to/hugo
 go install github.com/spf13/hugo/hugolib
@@ -372,10 +380,13 @@ go run main.go
 </code></pre>
 
             </div>
+
             <footer class="article-footer">
-    <a data-url="https://syui.github.io/hugo-theme-arch/2016/01/01/sample" data-id="04c6e90faac2675aa89e2176d2eec7d8" class="article-share-link">
+    <a data-url="https://syui.github.io/hugo-theme-arch/2016/01/01/sample" data-id="5b8c86d873483e1268c2cd083c92eb02" class="article-share-link">
         Share
     </a>
+
+
     
 </footer>
 
@@ -384,7 +395,12 @@ go run main.go
         
 
     </article>
+
     <section id="comments">
+  <script type="text/javascript">
+   talaria.init({REPOSITORY_NAME: 'hugo-theme-arch',
+                 GITHUB_USERNAME: 'syui'});
+  </script>
         <div id="disqus_thread">
             
         </div>
@@ -497,7 +513,7 @@ go run main.go
 
 
 
-    
+
     
 </aside>
 
