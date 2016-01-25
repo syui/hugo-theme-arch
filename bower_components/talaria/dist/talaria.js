@@ -7,11 +7,11 @@ var talaria = (function (P) {
      */
     var CONFIG = {},
         DEFAULTS = {
-            COMMENTABLE_CONTENT_PATH_PREFIX: 'post/',
+            COMMENTABLE_CONTENT_PATH_PREFIX: 'content/post/',
             CONTENT_SUFFIX: '.md',
             CACHE_TIMEOUT: 60 * 60 * 1000, // cache github data for 1 hour
-            PAGINATION_SCHEME: /\/page\d+\//,
-            LOCAL_STORAGE_SUPPORTED: false,
+            PAGINATION_SCHEME: /\/post\d+\//,
+            LOCAL_STORAGE_SUPPORTED: true,
             PERMALINK_IDENTIFIER: 'a.permalink',
             PERMALINK_STYLE: /[\.\w\-_:\/]+\/(\d+)\/(\d+)\/(\d+)\/([\w\-\.]+)$/
         };
