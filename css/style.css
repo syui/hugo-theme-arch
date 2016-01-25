@@ -2053,3 +2053,10 @@ img {
     width: 100%;
 }
 
+div.talaria-wrapper a > img {
+    width: 48px !important;
+}
+
+div.talaria-header h3 small {
+    font-size: 1.2rem !important;
+}
