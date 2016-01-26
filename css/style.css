@@ -2068,3 +2068,7 @@ div.talaria-header h3 small {
 div.talaria-wrapper div.talaria-comment-body {
     padding: 1rem !important;
 }
+
+#header a, #header a:hover {
+    color: #999 !important;
+}
