@@ -2060,3 +2060,11 @@ div.talaria-wrapper a > img {
 div.talaria-header h3 small {
     font-size: 1.2rem !important;
 }
+
+#article-nav {
+    padding: 50px;
+}
+
+div.talaria-wrapper div.talaria-comment-body {
+    padding: 1rem !important;
+}
