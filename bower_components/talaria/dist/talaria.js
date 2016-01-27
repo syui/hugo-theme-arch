@@ -231,7 +231,7 @@ var talaria = (function (P) {
             '    Unable to retrieve comments for this post.' +
             '  </div>' +
             '  <div class="talaria-comment-count' + (commentsHidden ? '' : ' hide') + '">' +
-            '    <a id="talaria-show-' + id + '" href="' + url + '">' + (ccount === 0 ? 'Be the first to comment' : (ccount + ' comment' + (ccount === 1 ? '' : 's'))) + '</a>' +
+            '    <a id="talaria-show-' + id + '" href="' + url + '" target="_blank">' + (ccount === 0 ? 'Be the first to comment' : (ccount + ' comment' + (ccount === 1 ? '' : 's'))) + '</a>' +
             '  </div>' +
             '  <div class="talaria-comment-list-wrapper' + (commentsHidden ? ' hide' : '') + '">' +
             '    <div class="talaria-header">' +
