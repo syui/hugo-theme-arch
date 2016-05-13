@@ -1,0 +1,77 @@
+.navbar-header h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.navbar-default {
+	background-color: #333;
+	border-color: none;
+}
+.navbar {
+	border-radius: 0;
+}
+.navbar {
+	position: none;
+	min-height: 0;
+	margin-bottom: 0;
+	border: none;
+}
+
+.navbar-nav > li > .dropdown-menu {
+	background-color: #333;
+}
+
+.navbar-toggle {
+	border: 0px solid transparent;
+	border-radius: 0px;
+}
+
+#header a:visited > a.dropdown-toggle {
+	color:#333;
+}
+
+.dropdown-menu .divider {
+	background-color: #38b7ea;
+}
+
+.thumbnail {
+	padding: 0px;
+	border: 0px solid #ddd;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: initial;
+}
+
+.btn-default {
+	color: #fff;
+	background-color: #0089BF;
+	border-color: #0089BF;
+}
+.btn {
+	border-radius: 0px;
+}
+
+.form-control {
+	border-radius: 0px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+@media screen and (max-width: 825px) {
+	.navbar-form.navbar-left .btn {
+		width: 100%;
+	}
+}
+
+.dropdown-submenu > .dropdown-menu {
+    background-color: #333;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+
+body {
+    background: #F6F9FC none repeat scroll 0% 0%;
+}

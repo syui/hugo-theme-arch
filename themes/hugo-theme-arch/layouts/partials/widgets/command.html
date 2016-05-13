@@ -1,0 +1,7 @@
+<div class="widget-wrap">
+    <div class="widget">
+	    <h3 class="widget-title">Template</h3>
+		{{ $resp := getJSON "https://api.github.com/repos/syui/hugo-theme-arch/readme"  }}
+		{{ $resp.content | base64Decode | markdownify }}
+</div>
+</div>

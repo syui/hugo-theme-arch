@@ -1,0 +1,31 @@
+{{ partial "head" . }}
+{{ partial "header" . }}
+
+<div id="container">
+   <div class="outer">
+    {{ partial "profile" . }}
+    <section id="main">
+        <article class="article article-type-post" itemscope="" itemprop="blogPost">
+            <div class="article-inner">
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        <center>
+                        <h1>
+                            {{with .Site.Data.l10n.page_not_found.title}}{{.}}{{end}}
+                        </h1>
+                        <h3>
+                            {{with .Site.Data.l10n.page_not_found.subtitle}}{{.}}{{end}}
+                        </h3>
+                        </center>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+    {{ partial "sidebar" . }}
+</div>
+</div>
+
+{{ partial "footer" . }}
+</body>
+</html>

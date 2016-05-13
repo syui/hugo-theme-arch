@@ -1,0 +1,18 @@
+name = "arch"
+license = "MIT"
+licenselink = "//github.com/syui/hugo-theme-arch/blob/master/LICENSE.md"
+description = "The blog theme you may fall in love with, coming to Hugo. "
+homepage = "//github.com/syui/hugo-theme-arch"
+tags = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics", "useful shortcodes", "responsive", "bootstrap", "font awesome", "archlinux", "hotkeys"]
+features = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics", "useful shortcodes", "responsive", "bootstrap", "font awesome", "archlinux", "hotkeys"]
+min_version = 0.15
+
+[author]
+  name = "syui"
+  homepage = "//syui.github.com/"
+
+# If reference an existing theme
+[original]
+  name = "Digitalcraftsman"
+  homepage = "//github.com/digitalcraftsman"
+  repo = "//github.com/digitalcraftsman/hugo-icarus-theme"

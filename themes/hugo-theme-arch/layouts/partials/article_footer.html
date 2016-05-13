@@ -1,0 +1,18 @@
+<footer class="article-footer">
+    <a href="http://twitter.com/share?url={{ .Permalink }}&text={{ .Title }}" target="_blank" title="Twitter" >
+    	<span class="article-share-link">
+    	    Share
+	</span>
+    </a>
+    <!--
+    <a data-url="{{ .Permalink }}" data-id="{{ .UniqueID }}" class="article-share-link">
+        {{with .Site.Data.l10n.articles.share}}{{.}}{{end}}
+    </a>
+    -->
+    {{ if not (eq .Site.DisqusShortname "") }}
+
+    <a href="{{ .Permalink }}/#disqus_thread" class="article-comment-link">
+        {{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}
+    </a>
+    {{end}}
+</footer>

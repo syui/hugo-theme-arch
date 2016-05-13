@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<head>
+    <!--<title>{{ .Title }} &middot; {{ .Site.Title }}</title>-->
+    <title>{{ .Title }}</title>
+    {{ .Hugo.Generator }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.site_description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ if .RSSlink }}
+      <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+      <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+    <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
+    <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png" />
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/monokai.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}font/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}font/icomoon/css/icomoon.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/google_news.html" . }}
+    {{ template "_internal/schema.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    <script src="{{ .Site.BaseURL }}bower_components/jquery/dist/jquery-2.2.0.min.js "></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+    <script src="{{ .Site.BaseURL }}fancybox/jquery.fancybox.pack.js"></script>
+    <script src="{{ .Site.BaseURL }}js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <!-- hotkeys -->
+    <script src="{{ .Site.BaseURL }}js/jquery.hotkeys.js "></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}bower_components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}bower_components/bootstrap/css/dropdowns-enhancement.css">
+    <script src="{{ .Site.BaseURL }}bower_components/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ .Site.BaseURL }}bower_components/bootstrap/js/dropdowns-enhancement.js"></script>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.css">
+
+    <!-- talaria -->
+    <link href="{{ .Site.BaseURL }}bower_components/talaria/dist/talaria.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="{{ .Site.BaseURL }}bower_components/bluebird/js/browser/bluebird.js"></script>
+    <script type="text/javascript" src="{{ .Site.BaseURL }}bower_components/talaria/dist/talaria.js"></script>
+
+    <!-- highlightjs -->
+    <!--<script src="{{ .Site.BaseURL }}bower_components/highlightjs/highlight.pack.min.js"></script>-->
+
+</head>
+<body>
+<div class="container">
