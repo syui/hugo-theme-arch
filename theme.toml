@@ -11,3 +11,7 @@ min_version=0.15
   name = "syui"
   homepage = "https://syui.github.io"
 
+[original]
+    author = "archlinux"
+    homepage = "https://archlinux.org"
+    repo = "https://github.com/archlinux/archweb"
