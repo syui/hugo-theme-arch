@@ -1,4 +1,4 @@
-baseurl = "https://syui.github.io/hugo-theme-arch/"
+baseurl = "https://syui.github.io/"
 languageCode = "en-us"
 title = "hugo-theme-arch"
 # Enable comments by entering your Disqus shortname
@@ -7,8 +7,8 @@ disqusShortname = ""
 googleAnalytics = ""
 # Define the number of posts per site
 paginate = 10
-theme = "hugo-theme-arch"
-
+theme = ""
+#theme = "hugo-theme-arch"
 
 [permalinks]
     post = "/:year/:month/:day/:slug"

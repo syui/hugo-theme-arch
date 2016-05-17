@@ -19,6 +19,18 @@ $ git clone https://github.com/syui/hugo-theme-arch
 $ cd hugo-theme-arch
 ```
 
+## Start Command
+
+```bash
+$ pwd
+hugo-theme-arch
+
+$ cp -rf exampleSite/{config.toml,content} .
+$ hugo server
+------------------------
+$ curl -sL localhost:1313
+```
+
 ## Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
