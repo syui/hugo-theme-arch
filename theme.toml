@@ -1,17 +1,17 @@
-name = "Air"
+name = "Arch"
 license = "MIT"
 licenselink = "https://github.com/syui/hugo-theme-air/blob/master/LICENSE.md"
-description = "Casper theme from Ghost Foundation, Plus particles.js"
-homepage = "https://syui.github.io/hugo-theme-air"
+description = "Arch Linux Themes"
+homepage = "https://syui.github.io/hugo-theme-arch"
 tags = ["blog"]
-features = ["disqus", "google analytics","share"]
-min_version=0.14
+features = ["arch linux","bootstrap", "talaria"]
+min_version=0.15
 
 [author]
   name = "syui"
   homepage = "https://syui.github.io"
 
 [original]
-  name = "hugo-theme-casper"
-  homepage = "http://vjeantet.fr/"
-  repo = "https://github.com/vjeantet/hugo-theme-casper"
+    author = "archlinux"
+    homepage = "https://archlinux.org"
+    repo = "https://github.com/archlinux/archweb"

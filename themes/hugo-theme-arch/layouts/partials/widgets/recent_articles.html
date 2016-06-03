@@ -1,0 +1,31 @@
+{{ if .Site.Params.widgets.recent_articles }}
+
+<div class="widget-wrap">
+    <div class="widget">
+        <ul id="recent-post">
+		<li id="first-recent"><a href="sitemap.xml" id="firstmove" class="move"><h3 class="widget-title">
+			Latest News
+					<!--{{with .Site.Data.l10n.widgets.recent_articles.title}}{{.}}{{end}} -->
+    </h3></a></li>
+            {{ range first 10 (where .Site.Pages "Type" "post") }}
+	    <li>
+		    <!--
+                <div class="item-thumbnail">
+                    <a href="{{ .Permalink }}" class="thumbnail">
+                    {{ if isset .Params "banner" }}
+                        <span style="background-image:url({{ $.Site.BaseURL }}{{ .Params.banner }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                    {{else}}
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    {{ end }}
+		    </a>
+                </div>
+		-->
+		<a href="{{ .Permalink }}" class="move">{{ .Title }}</a>
+
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}
+
