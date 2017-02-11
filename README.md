@@ -40,6 +40,13 @@ $ curl -sL localhost:1313
 
 Now enter [`localhost:1313`](//localhost:1313) in the address bar of your browser.
 
+> config.toml
+
+```toml
+- baseurl = "https://syui.github.io/hugo-theme-arch/"
++ baseurl = "/"
+```
+
 ## Annotations
 
 Thanks to [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project.
