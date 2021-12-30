@@ -1,11 +1,11 @@
 name = "Arch"
 license = "MIT"
-licenselink = "https://github.com/syui/hugo-theme-air/blob/master/LICENSE.md"
+licenselink = "https://github.com/syui/hugo-theme-arch/blob/master/LICENSE.md"
 description = "Arch Linux Themes"
-homepage = "https://syui.github.io/hugo-theme-arch"
-tags = ["blog"]
-features = ["arch linux","bootstrap", "talaria"]
-min_version=0.15
+homepage = "https://syui.cf/hugo-theme-arch"
+tags = ["blog","bootstrap","all"]
+features = ["arch linux", "archlinux", "arch", "bootstrap", "talaria"]
+min_version=0.3
 
 [author]
   name = "syui"
