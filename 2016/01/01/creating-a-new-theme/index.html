@@ -1,102 +1,62 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-    
-    <title>Creating a new theme</title>
-    <meta name="generator" content="Hugo 0.15" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    
-    
-    <link rel="icon" href="https://syui.github.io/hugo-theme-arch/favicon.ico">
-    <link rel="apple-touch-icon" href="https://syui.github.io/hugo-theme-arch/apple-touch-icon.png" />
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/css/style.css">
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/css/monokai.css">
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/fancybox/jquery.fancybox.css">
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/font/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/font/icomoon/css/icomoon.css">
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/css/font.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Creating a new theme" />
-<meta property="og:description" content="Overview Hugo is a static HTML and CSS website generator written in [Go][]. It is optimized for speed, easy use and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website. Hugo relies on Markdown files with front matter for meta data. And you can run Hugo from any directory. This works well for shared hosts and other systems where you don’t have a privileged account." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://syui.github.io/hugo-theme-arch/2016/01/01/creating-a-new-theme" />
+	<head>
+		
+		<title>Creating a new theme</title>
+		<meta name="generator" content="Hugo 0.91.2" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		
+		<link href="/hugo-theme-arch/2016/01/01/creating-a-new-theme/" rel="alternate" type="application/rss+xml" title="hugo-theme-arch" />
+		<link href="/hugo-theme-arch/2016/01/01/creating-a-new-theme/" rel="feed" type="application/rss+xml" title="hugo-theme-arch" />
+		<link rel="icon" href="https://syui.cf/hugo-theme-arch/favicon.ico">
+		<link rel="apple-touch-icon" href="https://syui.cf/hugo-theme-arch/apple-touch-icon.png" />
+		<link rel="stylesheet" href="https://syui.cf/hugo-theme-arch/css/style.css">
+		<link rel="stylesheet" href="https://syui.cf/hugo-theme-arch/css/monokai.css">
+		<link rel="stylesheet" href="https://syui.cf/hugo-theme-arch/fancybox/jquery.fancybox.css">
+		<link rel="stylesheet" href="https://syui.cf/hugo-theme-arch/font/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://syui.cf/hugo-theme-arch/font/icomoon/css/icomoon.css">
+		<link rel="stylesheet" href="https://syui.cf/hugo-theme-arch/css/font.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+		<script src="https://syui.cf/hugo-theme-arch/bower_components/jquery/dist/jquery-2.2.0.min.js "></script>
+		
+		<script src="https://syui.cf/hugo-theme-arch/fancybox/jquery.fancybox.pack.js"></script>
+		<script src="https://syui.cf/hugo-theme-arch/js/script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 
+		
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+						tex2jax: {
+								inlineMath: [['$','$'], ['\\(','\\)']]}
+						});
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
 
-<meta property="og:updated_time" content="2016-01-01T00:00:00&#43;00:00"/>
+		
+		<script src="https://syui.cf/hugo-theme-arch/js/jquery.hotkeys.js "></script>
 
+		
+		<link rel="stylesheet" href="https://syui.cf/hugo-theme-arch/bower_components/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://syui.cf/hugo-theme-arch/bower_components/bootstrap/css/dropdowns-enhancement.css">
+		<script src="https://syui.cf/hugo-theme-arch/bower_components/bootstrap/js/bootstrap.min.js"></script>
+		<script src="https://syui.cf/hugo-theme-arch/bower_components/bootstrap/js/dropdowns-enhancement.js"></script>
+		<link rel="stylesheet" href="https://syui.cf/hugo-theme-arch/css/bootstrap.css">
 
+		
+		<link href="https://syui.cf/hugo-theme-arch/bower_components/talaria/dist/talaria.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="https://syui.cf/hugo-theme-arch/bower_components/bluebird/js/browser/bluebird.js"></script>
+		<script type="text/javascript" src="https://syui.cf/hugo-theme-arch/bower_components/talaria/dist/talaria.js"></script>
 
+		
+		
 
-
-
-
-
-
-
-    
-    
-<meta itemprop="name" content="Creating a new theme">
-<meta itemprop="description" content="Overview Hugo is a static HTML and CSS website generator written in [Go][]. It is optimized for speed, easy use and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website. Hugo relies on Markdown files with front matter for meta data. And you can run Hugo from any directory. This works well for shared hosts and other systems where you don’t have a privileged account.">
-
-
-<meta itemprop="dateModified" content="2016-01-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="801">
-
-
-
-<meta itemprop="keywords" content="news,golang,hugo,jekyll," />
-
-    
-
-  <meta name="twitter:card" content="summary"/>
-
-
-
-<meta name="twitter:title" content="Creating a new theme"/>
-<meta name="twitter:description" content="Overview Hugo is a static HTML and CSS website generator written in [Go][]. It is optimized for speed, easy use and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website. Hugo relies on Markdown files with front matter for meta data. And you can run Hugo from any directory. This works well for shared hosts and other systems where you don’t have a privileged account."/>
-
-
-
-    <script src="https://syui.github.io/hugo-theme-arch/bower_components/jquery/dist/jquery-2.2.0.min.js "></script>
-    
-    <script src="https://syui.github.io/hugo-theme-arch/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="https://syui.github.io/hugo-theme-arch/js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-    
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']]}
-      });
-    </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
-    <script src="https://syui.github.io/hugo-theme-arch/js/jquery.hotkeys.js "></script>
-
-    
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/bower_components/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/bower_components/bootstrap/css/dropdowns-enhancement.css">
-    <script src="https://syui.github.io/hugo-theme-arch/bower_components/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://syui.github.io/hugo-theme-arch/bower_components/bootstrap/js/dropdowns-enhancement.js"></script>
-    <link rel="stylesheet" href="https://syui.github.io/hugo-theme-arch/css/bootstrap.css">
-
-    
-    <link href="https://syui.github.io/hugo-theme-arch/bower_components/talaria/dist/talaria.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="https://syui.github.io/hugo-theme-arch/bower_components/bluebird/js/browser/bluebird.js"></script>
-    <script type="text/javascript" src="https://syui.github.io/hugo-theme-arch/bower_components/talaria/dist/talaria.js"></script>
-
-    
-    
-
-</head>
-<body>
-<div class="container">
+	</head>
+	<body>
+		<div class="container">
 
 <header id="header">
   <div id="header-main" class="header-inner">
@@ -113,7 +73,7 @@
       		  <span class="icon-bar"></span>
       		</button>
 		    <h1>
-			    <a class="navbar-brand" href="https://syui.github.io/hugo-theme-arch/">
+			    <a class="navbar-brand" href="https://syui.cf/hugo-theme-arch/">
 				    <span class="icon-archlinux"></span>
 				    
 				    
@@ -192,197 +152,125 @@
             
 
             <header class="article-header">
-    <a href="https://syui.github.io/hugo-theme-arch/2016/01/01/creating-a-new-theme" class="permalink">
+    
     <h1 class="article-title" itemprop="name">
-        Creating a new theme
+	<a href="https://syui.cf/hugo-theme-arch/2016/01/01/creating-a-new-theme/" class="permalink">Creating a new theme</a>
     </h1>
-    </a>
 	<time datetime="2016-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-01-01</time>
-	
     <div class="article-meta">
 
-        
-        
-        <div class="article-category">
-            <i class="fa fa-folder"></i>
-            
-            <a class="article-category-link" href="https://syui.github.io/hugo-theme-arch/categories/news">News</a>
-            
-            
-        </div>
-        
-        
-        
-        <div class="article-category">
-		<i class="fa fa-chevron-right"></i>
-		
-            
-            <a class="article-category-link" href="https://syui.github.io/hugo-theme-arch/tags/hugo">hugo</a>
-            , 
-            
-            <a class="article-category-link" href="https://syui.github.io/hugo-theme-arch/tags/golang">golang</a>
-            , 
-            
-            <a class="article-category-link" href="https://syui.github.io/hugo-theme-arch/tags/jekyll">jekyll</a>
-            
-            
-        </div>
         
     </div>
 </header>
 
             <div class="article-entry" itemprop="articleBody">
-                
-
-<h2 id="overview:8c90d666616ea4e73cd71b49d668aa98">Overview</h2>
-
+                <h2 id="overview">Overview</h2>
 <p>Hugo is a static HTML and CSS website generator written in [Go][].
 It is optimized for speed, easy use and configurability.
 Hugo takes a directory with content and templates and renders them into a full HTML website.</p>
-
 <p>Hugo relies on Markdown files with front matter for meta data.
 And you can run Hugo from any directory.
 This works well for shared hosts and other systems where you don’t have a privileged account.</p>
-
 <p>Hugo renders a typical website of moderate size in a fraction of a second.
 A good rule of thumb is that each piece of content renders in around 1 millisecond.</p>
-
 <p>Hugo is designed to work well for any kind of website including blogs, tumbles and docs.</p>
-
-<h4 id="supported-architectures:8c90d666616ea4e73cd71b49d668aa98">Supported Architectures</h4>
-
-<p>Currently, we provide pre-built Hugo binaries for Windows, Linux, FreeBSD, NetBSD and OS&nbsp;X (Darwin) for x64, i386 and ARM architectures.</p>
-
-<p>Hugo may also be compiled from source wherever the Go compiler tool chain can run, e.g. for other operating systems including DragonFly BSD, OpenBSD, Plan&nbsp;9 and Solaris.</p>
-
+<h4 id="supported-architectures">Supported Architectures</h4>
+<p>Currently, we provide pre-built Hugo binaries for Windows, Linux, FreeBSD, NetBSD and OS X (Darwin) for x64, i386 and ARM architectures.</p>
+<p>Hugo may also be compiled from source wherever the Go compiler tool chain can run, e.g. for other operating systems including DragonFly BSD, OpenBSD, Plan 9 and Solaris.</p>
 <p><strong>Complete documentation is available at [Hugo Documentation][].</strong></p>
-
-<h2 id="choose-how-to-install:8c90d666616ea4e73cd71b49d668aa98">Choose How to Install</h2>
-
+<h2 id="choose-how-to-install">Choose How to Install</h2>
 <p>If you want to use Hugo as your site generator, simply install the Hugo binaries.
 The Hugo binaries have no external dependencies.</p>
-
 <p>To contribute to the Hugo source code or documentation, you should <a href="https://github.com/spf13/hugo#fork-destination-box">fork the Hugo GitHub project</a> and clone it to your local machine.</p>
-
 <p>Finally, you can install the Hugo source code with <code>go</code>, build the binaries yourself, and run Hugo that way.
 Building the binaries is an easy task for an experienced <code>go</code> getter.</p>
-
-<h3 id="install-hugo-as-your-site-generator-binary-install:8c90d666616ea4e73cd71b49d668aa98">Install Hugo as Your Site Generator (Binary Install)</h3>
-
+<h3 id="install-hugo-as-your-site-generator-binary-install">Install Hugo as Your Site Generator (Binary Install)</h3>
 <p>Use the <a href="http://gohugo.io/overview/installing/">installation instructions in the Hugo documentation</a>.</p>
-
-<h3 id="clone-the-hugo-project-contributor:8c90d666616ea4e73cd71b49d668aa98">Clone the Hugo Project (Contributor)</h3>
-
+<h3 id="clone-the-hugo-project-contributor">Clone the Hugo Project (Contributor)</h3>
 <ol>
-<li><p>Make sure your local environment has the following software installed:</p>
-
+<li>
+<p>Make sure your local environment has the following software installed:</p>
 <ul>
 <li><a href="https://git-scm.com/">Git</a></li>
 <li><a href="https://www.mercurial-scm.org/">Mercurial</a></li>
 <li>[Go][] 1.4+</li>
-</ul></li>
-
-<li><p><a href="https://github.com/spf13/hugo">Fork the Hugo project on GitHub</a>.</p></li>
-
-<li><p>Clone your fork:</p>
-
-<pre><code>git clone https://github.com/YOURNAME/hugo
-</code></pre></li>
-
-<li><p>Change into the <code>hugo</code> directory:</p>
-
-<pre><code>cd hugo
-</code></pre></li>
-
-<li><p>Install the Hugo project’s package dependencies:</p>
-
-<pre><code>go get -u -v github.com/spf13/hugo
-</code></pre></li>
-
-<li><p>Use a symbolic link to add your locally cloned Hugo repository to your <code>$GOPATH</code>, assuming you prefer doing development work outside of <code>$GOPATH</code>:</p>
-
-<pre><code class="language-bash">rm -rf &quot;$GOPATH/src/github.com/spf13/hugo&quot;
-ln -s `pwd` &quot;$GOPATH/src/github.com/spf13/hugo&quot;
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/spf13/hugo">Fork the Hugo project on GitHub</a>.</p>
+</li>
+<li>
+<p>Clone your fork:</p>
+<pre><code> git clone https://github.com/YOURNAME/hugo
 </code></pre>
-
-<p>Go expects all of your libraries to be found in<code>$GOPATH</code>.</p></li>
+</li>
+<li>
+<p>Change into the <code>hugo</code> directory:</p>
+<pre><code> cd hugo
+</code></pre>
+</li>
+<li>
+<p>Install the Hugo project’s package dependencies:</p>
+<pre><code> go get -u -v github.com/spf13/hugo
+</code></pre>
+</li>
+<li>
+<p>Use a symbolic link to add your locally cloned Hugo repository to your <code>$GOPATH</code>, assuming you prefer doing development work outside of <code>$GOPATH</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf <span style="color:#e6db74">&#34;</span>$GOPATH<span style="color:#e6db74">/src/github.com/spf13/hugo&#34;</span>
+ln -s <span style="color:#e6db74">`</span>pwd<span style="color:#e6db74">`</span> <span style="color:#e6db74">&#34;</span>$GOPATH<span style="color:#e6db74">/src/github.com/spf13/hugo&#34;</span>
+</code></pre></div><p>Go expects all of your libraries to be found in<code>$GOPATH</code>.</p>
+</li>
 </ol>
-
-<h3 id="build-and-install-the-binaries-from-source-advanced-install:8c90d666616ea4e73cd71b49d668aa98">Build and Install the Binaries from Source (Advanced Install)</h3>
-
+<h3 id="build-and-install-the-binaries-from-source-advanced-install">Build and Install the Binaries from Source (Advanced Install)</h3>
 <p>Add Hugo and its package dependencies to your go <code>src</code> directory.</p>
-
 <pre><code>go get -v github.com/spf13/hugo
 </code></pre>
-
 <p>Once the <code>get</code> completes, you should find your new <code>hugo</code> (or <code>hugo.exe</code>) executable sitting inside <code>$GOPATH/bin/</code>.</p>
-
 <p>To update Hugo’s dependencies, use <code>go get</code> with the <code>-u</code> option.</p>
-
 <pre><code>go get -u -v github.com/spf13/hugo
 </code></pre>
-
-<h2 id="contribute-to-hugo:8c90d666616ea4e73cd71b49d668aa98">Contribute to Hugo</h2>
-
+<h2 id="contribute-to-hugo">Contribute to Hugo</h2>
 <p>We welcome contributions to Hugo of any kind including documentation, themes, organization, tutorials, blog posts, bug reports, issues, feature requests, feature implementation, pull requests, answering questions on the forum, helping to manage issues, etc.</p>
-
 <p>The Hugo community and maintainers are very active and helpful and the project benefits greatly from this activity.</p>
-
-<p><a href="https://waffle.io/spf13/hugo/metrics"><img src="https://graphs.waffle.io/spf13/hugo/throughput.svg" alt="Throughput Graph" /></a></p>
-
+<p><a href="https://waffle.io/spf13/hugo/metrics"><img src="https://graphs.waffle.io/spf13/hugo/throughput.svg" alt="Throughput Graph"></a></p>
 <p>If you have any questions about how to contribute or what to contribute please ask on the <a href="http://discuss.gohugo.io">forum</a>.</p>
-
-<h2 id="code-contribution-guideline:8c90d666616ea4e73cd71b49d668aa98">Code Contribution Guideline</h2>
-
+<h2 id="code-contribution-guideline">Code Contribution Guideline</h2>
 <p>We welcome your contributions.
 To make the process as seamless as possible, we ask for the following:</p>
-
 <ul>
 <li>Go ahead and fork the project and make your changes. We encourage pull requests to discuss code changes.</li>
 <li>When you’re ready to create a pull request, be sure to:
-
 <ul>
 <li>Sign the <a href="https://cla-assistant.io/spf13/hugo">CLA</a></li>
 <li>Have test cases for the new code. If you have questions about how to do it, please ask in your pull request.</li>
 <li>Run <code>go fmt</code></li>
 <li>Squash your commits into a single commit. <code>git rebase -i</code>. It’s okay to force update your pull request.</li>
-<li>This <a href="http://chris.beams.io/posts/git-commit/">blog article</a> is a good resource for learning how to write good commit messages, the most important part being that each commit message should have a title/subject in imperative mood starting with a capital letter and no trailing period: <em>&ldquo;Return error on wrong use of the Paginator&rdquo;</em>, <strong>NOT</strong> <em>&ldquo;returning some error.&rdquo;</em> Also, if your commit references one or more GitHub issues, always end your commit message body with <em>See #1234</em> or <em>Fixes #1234</em>. Replace <em>1234</em> with the GitHub issue ID. The last example will close the issue when the commit is merged into <em>master</em>.</li>
+<li>This <a href="http://chris.beams.io/posts/git-commit/">blog article</a> is a good resource for learning how to write good commit messages, the most important part being that each commit message should have a title/subject in imperative mood starting with a capital letter and no trailing period: <em>&ldquo;Return error on wrong use of the Paginator&rdquo;</em>, <strong>NOT</strong> <em>&ldquo;returning some error.&quot;</em> Also, if your commit references one or more GitHub issues, always end your commit message body with <em>See #1234</em> or <em>Fixes #1234</em>. Replace <em>1234</em> with the GitHub issue ID. The last example will close the issue when the commit is merged into <em>master</em>.</li>
 <li>Make sure <code>go test ./...</code> passes, and <code>go build</code> completes. Our <a href="https://travis-ci.org/spf13/hugo">Travis CI loop</a> (Linux) and <a href="https://ci.appveyor.com/project/spf13/hugo/branch/master">AppVeyor</a> (Windows) will catch most things that are missing.</li>
-</ul></li>
 </ul>
-
-<h3 id="build-hugo-with-your-changes:8c90d666616ea4e73cd71b49d668aa98">Build Hugo with Your Changes</h3>
-
-<pre><code class="language-bash">cd /path/to/hugo
+</li>
+</ul>
+<h3 id="build-hugo-with-your-changes">Build Hugo with Your Changes</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /path/to/hugo
 go build -o hugo main.go
 mv hugo /usr/local/bin/
-</code></pre>
-
-<h3 id="add-compile-information-to-hugo:8c90d666616ea4e73cd71b49d668aa98">Add Compile Information to Hugo</h3>
-
+</code></pre></div><h3 id="add-compile-information-to-hugo">Add Compile Information to Hugo</h3>
 <p>To add compile information to Hugo, replace the <code>go build</code> command with the following <em>(replace <code>/path/to/hugo</code> with the actual path)</em>:</p>
-
 <pre><code>go build -ldflags &quot;-X /path/to/hugo/hugolib.CommitHash `git rev-parse --short HEAD 2&gt;/dev/null` -X github.com/spf13/hugo/hugolib.BuildDate `date +%FT%T%z`&quot;
 </code></pre>
-
 <p>This will result in <code>hugo version</code> output that looks similar to:</p>
-
 <pre><code>Hugo Static Site Generator v0.13-DEV-8042E77 buildDate: 2014-12-25T03:25:57-07:00
 </code></pre>
-
-<p>Alternatively, just run <code>make</code> &mdash; all the “magic” above is already in the <code>Makefile</code>.  :wink:</p>
-
-<h3 id="run-hugo:8c90d666616ea4e73cd71b49d668aa98">Run Hugo</h3>
-
-<pre><code class="language-bash">cd /path/to/hugo
+<p>Alternatively, just run <code>make</code> — all the “magic” above is already in the <code>Makefile</code>.  :wink:</p>
+<h3 id="run-hugo">Run Hugo</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /path/to/hugo
 go install github.com/spf13/hugo/hugolib
 go run main.go
-</code></pre>
-
+</code></pre></div>
             </div>
 
             <footer class="article-footer">
-    <a href="http://twitter.com/share?url=https%3a%2f%2fsyui.github.io%2fhugo-theme-arch%2f2016%2f01%2f01%2fcreating-a-new-theme&text=Creating%20a%20new%20theme" target="_blank" title="Twitter" >
+    <a href="http://twitter.com/share?url=https%3a%2f%2fsyui.cf%2fhugo-theme-arch%2f2016%2f01%2f01%2fcreating-a-new-theme%2f&text=Creating%20a%20new%20theme" target="_blank" title="Twitter" >
     	<span class="article-share-link">
     	    Share
 	</span>
@@ -466,7 +354,19 @@ go run main.go
             
 	    <li>
 		    
-		<a href="https://syui.github.io/hugo-theme-arch/2016/01/01/creating-a-new-theme" class="move">Creating a new theme</a>
+		<a href="https://syui.cf/hugo-theme-arch/2016/01/01/creating-a-new-theme/" class="move">Creating a new theme</a>
+
+            </li>
+            
+	    <li>
+		    
+		<a href="https://syui.cf/hugo-theme-arch/post/" class="move">Posts</a>
+
+            </li>
+            
+	    <li>
+		    
+		<a href="https://syui.cf/hugo-theme-arch/1/01/01/" class="move"></a>
 
             </li>
             
@@ -484,7 +384,7 @@ go run main.go
         <ul class="category-list">
             
             <li class="category-list-item">
-                <a class="category-list-link" href="https://syui.github.io/hugo-theme-arch/categories/news">
+                <a class="category-list-link" href="https://syui.cf/hugo-theme-arch/categories/news">
                     news
                 </a>
                 <span class="category-list-count">1</span>
@@ -505,11 +405,11 @@ go run main.go
     </h3>
     <div class="widget tagcloud">
         
-        <a href="https://syui.github.io/hugo-theme-arch/tags/golang" style="font-size: 12px;">golang</a>
+        <a href="https://syui.cf/hugo-theme-arch/tags/golang" style="font-size: 12px;">golang</a>
         
-        <a href="https://syui.github.io/hugo-theme-arch/tags/hugo" style="font-size: 12px;">hugo</a>
+        <a href="https://syui.cf/hugo-theme-arch/tags/hugo" style="font-size: 12px;">hugo</a>
         
-        <a href="https://syui.github.io/hugo-theme-arch/tags/jekyll" style="font-size: 12px;">jekyll</a>
+        <a href="https://syui.cf/hugo-theme-arch/tags/jekyll" style="font-size: 12px;">jekyll</a>
         
     </div>
 </div>
@@ -526,7 +426,7 @@ go run main.go
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-	    &copy; 2016 <i class="fa fa-github"></i> <a href="https://github.com/syui">syui</a>. <br>
+	    &copy; 2021 <i class="fa fa-github"></i> <a href="https://github.com/syui">syui</a>. <br>
       Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/syui/hugo-theme-arch">hugo-theme-arch</a>.
     </div>
   </div>
