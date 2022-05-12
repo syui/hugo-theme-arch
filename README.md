@@ -47,6 +47,15 @@ Now enter [`localhost:1313`](//localhost:1313) in the address bar of your browse
 + baseurl = "/"
 ```
 
+fix main-domain : 
+
+> themes/hugo-theme-arch/layouts/partials/article_list.html 
+
+```html
+- {{ $t := index (split $s "/") 2 }}
++ {{ $t := index (split $s "/") 1 }}
+```
+
 ## Annotations
 
 Thanks to [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project.
