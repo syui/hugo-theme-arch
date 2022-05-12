@@ -1,38 +1,38 @@
 <section id="main">
 
-    {{ partial "article_first" . }}
-    {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
-    {{ range $paginator.Pages }}
-    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+	{{ partial "article_first" . }}
+	{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+	{{ range $paginator.Pages }}
 
-	    <div class="article-inner">
+	{{ $s := path.Dir (.Permalink | relURL) }}
+	{{ $t := index (split $s "/") 5 }}
 
-            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-            <a href="{{ .Permalink }}" itemprop="url">
-                <img src="{{ .Site.BaseURL }}{{ .Params.banner }}" class="article-banner"> {{ end }}
-            </a>
+	{{ if $t }}
+	<article class="article article-type-post" itemscope="" itemprop="blogPost">
 
-            {{ partial "article_header" . }}
-            <div class="article-entry" itemprop="articleBody">
-                <p>
-                    {{ .Summary }} ...
-                </p>
-                <p class="article-more-link">
-                    <a href="{{ .Permalink }}">
-			    Read more
-			    <!--
-                        {{with .Site.Data.l10n.articles.read_more}}{{.}}{{end}}
-			-->
-                    </a>
-                </p>
-            </div>
-	    <!--
-            {{ partial "article_footer" . }}
-	    -->
-        </div>
-    </article>
-    {{ end }}
+		<div class="article-inner">
 
-    {{ partial "pagination" . }}
+			{{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+			<a href="{{ .Permalink }}" itemprop="url">
+				<img src="{{ .Site.BaseURL }}{{ .Params.banner }}" class="article-banner"> {{ end }}
+			</a>
+
+			{{ partial "article_header" . }}
+			<div class="article-entry" itemprop="articleBody">
+				<p>
+				{{ .Summary }} ...
+				</p>
+				<p class="article-more-link">
+				<a href="{{ .Permalink }}">
+					Read more
+				</a>
+				</p>
+			</div>
+
+		</div>
+	</article>
+	{{ end }}
+
+	{{ end }}
+	{{ partial "pagination" . }}
 </section>
-<!-- // main section -->
