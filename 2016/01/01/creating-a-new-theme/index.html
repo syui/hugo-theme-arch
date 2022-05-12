@@ -3,7 +3,7 @@
 	<head>
 		
 		<title>Creating a new theme</title>
-		<meta name="generator" content="Hugo 0.91.2" />
+		<meta name="generator" content="Hugo 0.98.0" />
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
@@ -216,9 +216,9 @@ Building the binaries is an easy task for an experienced <code>go</code> getter.
 </li>
 <li>
 <p>Use a symbolic link to add your locally cloned Hugo repository to your <code>$GOPATH</code>, assuming you prefer doing development work outside of <code>$GOPATH</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf <span style="color:#e6db74">&#34;</span>$GOPATH<span style="color:#e6db74">/src/github.com/spf13/hugo&#34;</span>
-ln -s <span style="color:#e6db74">`</span>pwd<span style="color:#e6db74">`</span> <span style="color:#e6db74">&#34;</span>$GOPATH<span style="color:#e6db74">/src/github.com/spf13/hugo&#34;</span>
-</code></pre></div><p>Go expects all of your libraries to be found in<code>$GOPATH</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -rf <span style="color:#e6db74">&#34;</span>$GOPATH<span style="color:#e6db74">/src/github.com/spf13/hugo&#34;</span>
+</span></span><span style="display:flex;"><span>ln -s <span style="color:#e6db74">`</span>pwd<span style="color:#e6db74">`</span> <span style="color:#e6db74">&#34;</span>$GOPATH<span style="color:#e6db74">/src/github.com/spf13/hugo&#34;</span>
+</span></span></code></pre></div><p>Go expects all of your libraries to be found in<code>$GOPATH</code>.</p>
 </li>
 </ol>
 <h3 id="build-and-install-the-binaries-from-source-advanced-install">Build and Install the Binaries from Source (Advanced Install)</h3>
@@ -245,16 +245,16 @@ To make the process as seamless as possible, we ask for the following:</p>
 <li>Have test cases for the new code. If you have questions about how to do it, please ask in your pull request.</li>
 <li>Run <code>go fmt</code></li>
 <li>Squash your commits into a single commit. <code>git rebase -i</code>. It’s okay to force update your pull request.</li>
-<li>This <a href="http://chris.beams.io/posts/git-commit/">blog article</a> is a good resource for learning how to write good commit messages, the most important part being that each commit message should have a title/subject in imperative mood starting with a capital letter and no trailing period: <em>&ldquo;Return error on wrong use of the Paginator&rdquo;</em>, <strong>NOT</strong> <em>&ldquo;returning some error.&quot;</em> Also, if your commit references one or more GitHub issues, always end your commit message body with <em>See #1234</em> or <em>Fixes #1234</em>. Replace <em>1234</em> with the GitHub issue ID. The last example will close the issue when the commit is merged into <em>master</em>.</li>
+<li>This <a href="http://chris.beams.io/posts/git-commit/">blog article</a> is a good resource for learning how to write good commit messages, the most important part being that each commit message should have a title/subject in imperative mood starting with a capital letter and no trailing period: <em>&ldquo;Return error on wrong use of the Paginator&rdquo;</em>, <strong>NOT</strong> <em>&ldquo;returning some error.&rdquo;</em> Also, if your commit references one or more GitHub issues, always end your commit message body with <em>See #1234</em> or <em>Fixes #1234</em>. Replace <em>1234</em> with the GitHub issue ID. The last example will close the issue when the commit is merged into <em>master</em>.</li>
 <li>Make sure <code>go test ./...</code> passes, and <code>go build</code> completes. Our <a href="https://travis-ci.org/spf13/hugo">Travis CI loop</a> (Linux) and <a href="https://ci.appveyor.com/project/spf13/hugo/branch/master">AppVeyor</a> (Windows) will catch most things that are missing.</li>
 </ul>
 </li>
 </ul>
 <h3 id="build-hugo-with-your-changes">Build Hugo with Your Changes</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /path/to/hugo
-go build -o hugo main.go
-mv hugo /usr/local/bin/
-</code></pre></div><h3 id="add-compile-information-to-hugo">Add Compile Information to Hugo</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /path/to/hugo
+</span></span><span style="display:flex;"><span>go build -o hugo main.go
+</span></span><span style="display:flex;"><span>mv hugo /usr/local/bin/
+</span></span></code></pre></div><h3 id="add-compile-information-to-hugo">Add Compile Information to Hugo</h3>
 <p>To add compile information to Hugo, replace the <code>go build</code> command with the following <em>(replace <code>/path/to/hugo</code> with the actual path)</em>:</p>
 <pre><code>go build -ldflags &quot;-X /path/to/hugo/hugolib.CommitHash `git rev-parse --short HEAD 2&gt;/dev/null` -X github.com/spf13/hugo/hugolib.BuildDate `date +%FT%T%z`&quot;
 </code></pre>
@@ -263,10 +263,10 @@ mv hugo /usr/local/bin/
 </code></pre>
 <p>Alternatively, just run <code>make</code> — all the “magic” above is already in the <code>Makefile</code>.  :wink:</p>
 <h3 id="run-hugo">Run Hugo</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /path/to/hugo
-go install github.com/spf13/hugo/hugolib
-go run main.go
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /path/to/hugo
+</span></span><span style="display:flex;"><span>go install github.com/spf13/hugo/hugolib
+</span></span><span style="display:flex;"><span>go run main.go
+</span></span></code></pre></div>
             </div>
 
             <footer class="article-footer">
@@ -426,7 +426,7 @@ go run main.go
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-	    &copy; 2021 <i class="fa fa-github"></i> <a href="https://github.com/syui">syui</a>. <br>
+	    &copy; 2022 <i class="fa fa-github"></i> <a href="https://github.com/syui">syui</a>. <br>
       Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/syui/hugo-theme-arch">hugo-theme-arch</a>.
     </div>
   </div>
