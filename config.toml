@@ -11,7 +11,7 @@ theme = "hugo-theme-arch"
 
 
 [permalinks]
-    post = "/:year/:month/:day/:slug"
+    post = "/news/:year/:month/:day/:slug"
 
 [params]
     # Tell me who you're

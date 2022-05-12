@@ -5,9 +5,9 @@
 	{{ range $paginator.Pages }}
 
 	{{ $s := path.Dir (.Permalink | relURL) }}
-	{{ $t := index (split $s "/") 5 }}
+	{{ $t := index (split $s "/") 2 }}
+	{{ if eq $t "news" }}
 
-	{{ if $t }}
 	<article class="article article-type-post" itemscope="" itemprop="blogPost">
 
 		<div class="article-inner">
