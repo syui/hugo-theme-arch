@@ -27,7 +27,7 @@
       <table class="contact-list">
         <tr>
           {{ partial "social" . }}
-          <td><a href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          <td><a href="{{ .Site.BaseURL }}/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
         </tr>
       </table>
     </div>

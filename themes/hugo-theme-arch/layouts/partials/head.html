@@ -10,6 +10,9 @@
 		{{ with .Site.Params.site_description }}<meta name="description" content="{{ . }}">{{ end }}
 		<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 		<link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+		{{ range .AlternativeOutputFormats -}}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+		{{ end -}}
 		<link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
 		<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png" />
 		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
