@@ -5,7 +5,7 @@
     <loc>https://syui.cf/hugo-theme-arch/categories/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://syui.cf/hugo-theme-arch/2016/01/01/creating-a-new-theme/</loc>
+    <loc>https://syui.cf/hugo-theme-arch/news/2016/01/01/creating-a-new-theme/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://syui.cf/hugo-theme-arch/tags/golang/</loc>
@@ -28,7 +28,5 @@
   </url><url>
     <loc>https://syui.cf/hugo-theme-arch/tags/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://syui.cf/hugo-theme-arch/1/01/01/</loc>
   </url>
 </urlset>

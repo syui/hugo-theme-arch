@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://syui.cf/hugo-theme-arch/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a new theme</title>
-      <link>https://syui.cf/hugo-theme-arch/2016/01/01/creating-a-new-theme/</link>
+      <link>https://syui.cf/hugo-theme-arch/news/2016/01/01/creating-a-new-theme/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://syui.cf/hugo-theme-arch/2016/01/01/creating-a-new-theme/</guid>
+      <guid>https://syui.cf/hugo-theme-arch/news/2016/01/01/creating-a-new-theme/</guid>
       <description>Overview Hugo is a static HTML and CSS website generator written in [Go][]. It is optimized for speed, easy use and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website.
 Hugo relies on Markdown files with front matter for meta data. And you can run Hugo from any directory. This works well for shared hosts and other systems where you don’t have a privileged account.</description>
     </item>
